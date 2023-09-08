@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&display=swap');
+
+body {
+    font-family:'Lato',sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.cuadro1{
+    background-color: aquamarine;
+    width: 50%;
+}
+
+.cuadro2{
+    background-color: yellowgreen;
+    width: 50%;
+    text-align: left ;
+}
+
+h1 {
+    color: blue;
+    font-family: 'Bebas Neue',sans-serif;
+    font-size: 48px;
+}
+
+h2 {
+    color: red;
+}
+

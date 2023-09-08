@@ -2,17 +2,40 @@
 <html>
     <head>
         <title>Calculadora de hidratación basal</title>
+        <link rel="stylesheet" href="./style.css" />    
     </head>
 <body>
-    <h1>Cálculo de hidratación basal</h1>
-    <p>Introduzca el peso</p>
+    <div id="cuadro1">
+        <h1>Cálculo de hidratación basal</h1>
+        <span>Introduzca el peso del paciente:</span><br><br>
+        <input type="number" placeholder="Peso en Kg."/>
+        <button>Calcular</button><br><br>
 
-    <input type="number" placeholder="Peso en Kg."/>
-    <button>Calcular</button>
+        <span>Volumen diario: cc</span><br>
+        <span>Mantenimiento:  cc/h</span><br>
+        <span>m+m/2:  cc/h</span><br>
 
-    <p>Volumen diario: cc</p>
-    <p>Mantenimiento:  cc/h </p>
-    <p>m+m/2:  cc/h </p>
+    </div>
 
+    <div id="cuadro2">
+        <h2 align="center">¿Como se calculan? </h2>
+            <ul>
+                <li>Verificamos si el peso del niño es menor o mayor a 30 Kg.</li>
+                <ul>
+                    <li>Si pesa menos de 30 Kg, utilizamos el método Holliday-Segar:</li>
+                        <ol>
+                            <li>Si pesa 10 Kg. o menos, 100cc por cada Kg.</li>
+                            <li>Luego, por cada Kg. arriba de 10 y hasta 20 Kg, se suman 50 cc.</li>
+                            <li>Finalmente, por cada Kg. arriba de 20 Kg. se suman 20 cc.</li>
+                       </ol>
+                   <li>Si pesa más de 30 Kg., utilizamos el método de Superficie Corporal:</li>
+                        <span>Superficie corporal = ( (peso * 4) + 7) / (peso + 90)</span><br>
+                        <span>Este resultado se multiplica por 1500 o por 2000 para hallar el valor del volumen diario</span><br>
+                        <span>en cc, luego el medico decide cual de los dos resultados utilizar.</span><br>
+                </ul>
+                <li>Para calcular el flujo horario de mantenimiento hacemos el volumen diario/24 hs.</li>
+                <li>m+m/2 es simplemente el mantenimiento por 1.5</li>
+            </ul>
+    </div>    
 </body>
 </html>
